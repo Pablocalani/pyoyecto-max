@@ -20,7 +20,7 @@ class CreateClientesTable extends Migration
             $table->string('nombre', 60);
             $table->string('referencia', 200);
             $table->double('cobrar');
-            $table->string('descripcion', 200);
+            $table->string('descripcion', 1000);
             $table->string('foto', 100);
             $table->integer('cordenadax');
             $table->integer('cordenaday');

@@ -1,98 +1,35 @@
 
-
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('css')
+<link rel="stylesheet" href="{{ asset('/css/estilo.css') }}">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+@stop
+
+@section('title', 'formulario cliente')
 
 @section('content_header')
-    <h1>Dashboard</h1>
+
 @stop
 
 @section('content')
-<div class="container"> 
-  <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-    <div class="card-header">Formulario Cliente</div>
-    <div class="card-body">
-    <form action="dire">
-      <form>
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <label for="inputEmail4">URL destino</label>
-              <input type="url" class="form-control" placeholder="coloca URL de destino">
-            </div>
-            <div class="form-group col-md-6">
-              <label for="inputPassword4">Whatsapp</label>
-              <input type="text" class="form-control" id="inputPassword4" placeholder="coloca tu Whatsapp">
-            </div>
-            <div class="form-group col-md-6">
-              <label for="inputPassword4">Nombre</label>
-              <input type="text" class="form-control" id="inputPassword4" placeholder="coloca tu Nombre">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="inputAddress">Referencia</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="Referencia del domicilio">
-          </div>
-          <div class="form-row">
-            <label for="inputAddress">Cobrar</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="Monto a cobrar">
-          </div>
-          <div class="form-group">
-            <label for="inputAddress2">Descripcion del Producto</label>
-            <input type="text" class="form-control" id="inputAddress2" placeholder="Descripcion del Producto">
-          </div>
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <label for="inputCity">Ciudad</label>
-              <input type="text" class="form-control" id="inputCity" placeholder="cual es tu ciudad">
-            </div>
-            <div class="form-group col-md-6">
-              <label for="inputCity">eres hombre o mujer</label>
-              <input type="text" class="form-control" id="inputCity" placeholder="eres hombre o mujer">
-            </div>
-            <div class="form-group col-md-2">
-              <label for="inputZip">Zip</label>
-              <input type="text" class="form-control" id="inputZip">
-            </div>
-          <div class="form-group">
-          </div>
-          <button type="submit" class="btn btn-primary mt-3">Aceptar</button>
-        </form>
-  </form>
+    <div class="card micolor">
+        <div class="card-header bg-warning">Cliente</div>
+        <div class="card-body">
+            <form action="{{ route('cliente.guardar') }}" method="POST">
+                @csrf
+                @include('cliente.form')
+            </form>
+        </div>
     </div>
-  </div>
-</div>
-  
-  </div>
-@stop
 
-@section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
+    
 @stop
 
 @section('js')
-    <script> console.log('Hi!'); </script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 @stop
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

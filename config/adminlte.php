@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => 'MAX INICIO',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>MAX</b>PROYECTO',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -239,7 +239,7 @@ return [
         // Sidebar items:
         [
             'type' => 'sidebar-menu-search',
-            'text' => 'search',
+            'text' => 'buscador de todo',
         ],
         [
             'text' => 'blog',
@@ -247,49 +247,64 @@ return [
             'can'  => 'manage-blog',
         ],
         [
-            'text'        => 'pages',
+            'text'        => 'MAX',
             'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
+            'icon'        => 'fas fa-fw fa-lock',
             'label'       => 4,
-            'label_color' => 'success',
+            'label_color' => 'primary',
+            
         ],
-        ['header' => 'account_settings'],
         [
-            'text' => 'profile',
+            'text'        => 'Control 1',
+            'url'         => 'admin/pages',
+            'icon'        => 'fas fa-fw fa-lock',
+            'label'       => 4,
+            'label_color' => 'danger',
+        ],
+        [
+            'text'        => 'control 2 MAX',
+            'url'         => 'admin/pages',
+            'icon'        => 'fas fa-fw fa-lock',
+            'label'       => 4,
+            'label_color' => 'warning',
+        ],
+        ['header' => 'CONFIGURACION DE LA CUENTA'],
+        [
+            'text' => 'Usuario',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
-            'text' => 'change_password',
+            'text' => 'Coloca tu Contraseña',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
         ],
         [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
+            'text'    => 'Categorias',
+            'icon'    => 'fas fa-sitemap',
             'submenu' => [
                 [
-                    'text' => 'level_one',
+                    'text' => 'Premiun',
                     'url'  => '#',
                 ],
                 [
-                    'text'    => 'level_one',
+                    'text'    => 'Pro',
                     'url'     => '#',
                     'submenu' => [
                         [
-                            'text' => 'level_two',
+                            'text' => 'Plata',
                             'url'  => '#',
                         ],
                         [
-                            'text'    => 'level_two',
+                            'text'    => 'Bronze',
                             'url'     => '#',
                             'submenu' => [
                                 [
-                                    'text' => 'level_three',
+                                    'text' => 'Bronze Pequeño',
                                     'url'  => '#',
                                 ],
                                 [
-                                    'text' => 'level_three',
+                                    'text' => 'Bronze Grande',
                                     'url'  => '#',
                                 ],
                             ],
@@ -297,25 +312,59 @@ return [
                     ],
                 ],
                 [
-                    'text' => 'level_one',
+                    'text' => 'Normal',
                     'url'  => '#',
                 ],
             ],
         ],
+
+        [
+            'text'    => 'Tipo de Usuarios',
+            'icon'    => 'fas fa-user-plus',
+            'submenu' => [
+                [
+                    'text' => 'Administrador',
+                    'url'  => '#',
+                    'submenu' => [
+                        [
+                            'text' => 'Gerente General',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'Gerente Administrativo',
+                            'url'  => '#',
+                        ],
+                            [
+                            'text' => 'Gerente encargado',
+                            'url'  => '#',
+                        ],
+                    ],
+                ],
+                [
+                    'text' => 'Vendedor',
+                    'url'  => '#',
+                ],
+                    [
+                    'text' => 'Repartidor',
+                    'url'  => '#',
+                ],
+            ],
+        ],
+              
         ['header' => 'labels'],
         [
-            'text'       => 'important',
-            'icon_color' => 'red',
+            'text'       => 'Informacion',
+            'icon_color' => 'green',
             'url'        => '#',
         ],
         [
-            'text'       => 'warning',
+            'text'       => 'Videos',
+            'icon_color' => 'blue',
+            'url'        => '#',
+        ],
+        [
+            'text'       => 'Palabras',
             'icon_color' => 'yellow',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
             'url'        => '#',
         ],
     ],

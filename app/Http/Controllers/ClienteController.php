@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Cliente;
 use Illuminate\Http\Request;
+use App\Http\Requests\ClienteGuardarRequest;
 
 class ClienteController extends Controller
 {
@@ -34,9 +35,10 @@ class ClienteController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function guardar(ClienteGuardarRequest $request)
     {
-        //
+       //muestra en pantalla lo que llega dd($request->all());
+        Cliente::create($request->all());
     }
 
     /**

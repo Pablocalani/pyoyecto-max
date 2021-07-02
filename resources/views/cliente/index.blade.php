@@ -16,13 +16,13 @@
             @foreach ($clientes as $cliente)
             <tr>
                 <td>{{ $cliente->nombre }}</td>
-                <td class="table-warning">{{ $cliente->urldestino }}</td>
-                <td>{{ $cliente->whatsapp }}</td>
-                <td>{{ $cliente->referencia }}</td>
+                <td class="table-warning"><a href="{{ $cliente->urldestino }}">{{ $cliente->urldestino }}</a> </td>
+                <td><a href="{{ "https://wa.me/591".$cliente->whatsapp }}" class="">{{ $cliente->whatsapp }} <i class="fab fa-whatsapp"></i></a></td>
+                <td class="table-warning">{{ $cliente->referencia }}</td>
                 <td>{{ $cliente->cobrar }}</td>
-                <td>{{ $cliente->descripcion }}</td>
+                <td class="table-warning">{{ $cliente->descripcion }}</td>
                 <td>{{ $cliente->foto }}</td>
-                <td>{{ $cliente->cordenadax }}</td>
+                <td class="table-warning">{{ $cliente->cordenadax }}</td>
                 <td>{{ $cliente->cordenaday }}</td>
             </tr>
         @endforeach

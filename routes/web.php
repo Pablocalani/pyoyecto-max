@@ -15,3 +15,4 @@ use App\Http\Controllers\ClienteController;
 
 Route::get('/',[ClienteController::class,"index"]);
 Route::get('cliente/create',[ClienteController::class,"create"]);
+Route::post('cliente/guardar',[ClienteController::class,"guardar"] )->name('cliente.guardar');
